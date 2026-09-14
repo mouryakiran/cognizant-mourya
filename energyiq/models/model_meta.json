@@ -1,0 +1,170 @@
+{
+  "regions": [
+    "AEP",
+    "COMED",
+    "DAYTON",
+    "DEOK",
+    "DOM",
+    "DUQ",
+    "EKPC",
+    "FE",
+    "NI",
+    "OKGE",
+    "PJME",
+    "PJMW"
+  ],
+  "feature_columns": [
+    "region",
+    "anomaly_iqr",
+    "hour",
+    "dow",
+    "day",
+    "month",
+    "year",
+    "dayofweek",
+    "dayofyear",
+    "weekofyear",
+    "is_weekend",
+    "quarter",
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "month_sin",
+    "month_cos",
+    "is_holiday",
+    "lag_1h",
+    "lag_2h",
+    "lag_3h",
+    "lag_24h",
+    "lag_48h",
+    "lag_168h",
+    "rolling_mean_3h",
+    "rolling_std_3h",
+    "rolling_max_3h",
+    "rolling_min_3h",
+    "rolling_mean_6h",
+    "rolling_std_6h",
+    "rolling_max_6h",
+    "rolling_min_6h",
+    "rolling_mean_24h",
+    "rolling_std_24h",
+    "rolling_max_24h",
+    "rolling_min_24h",
+    "rolling_mean_168h",
+    "rolling_std_168h"
+  ],
+  "one_hot_columns": [
+    "anomaly_iqr",
+    "hour",
+    "dow",
+    "day",
+    "month",
+    "year",
+    "dayofweek",
+    "dayofyear",
+    "weekofyear",
+    "is_weekend",
+    "quarter",
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "month_sin",
+    "month_cos",
+    "is_holiday",
+    "lag_1h",
+    "lag_2h",
+    "lag_3h",
+    "lag_24h",
+    "lag_48h",
+    "lag_168h",
+    "rolling_mean_3h",
+    "rolling_std_3h",
+    "rolling_max_3h",
+    "rolling_min_3h",
+    "rolling_mean_6h",
+    "rolling_std_6h",
+    "rolling_max_6h",
+    "rolling_min_6h",
+    "rolling_mean_24h",
+    "rolling_std_24h",
+    "rolling_max_24h",
+    "rolling_min_24h",
+    "rolling_mean_168h",
+    "rolling_std_168h",
+    "region_AEP",
+    "region_COMED",
+    "region_DAYTON",
+    "region_DEOK",
+    "region_DOM",
+    "region_DUQ",
+    "region_EKPC",
+    "region_FE",
+    "region_NI",
+    "region_OKGE",
+    "region_PJME",
+    "region_PJMW"
+  ],
+  "target": "consumption_mw",
+  "metrics": {
+    "mae_mw": 57.442028479051324,
+    "rmse_mw": 84.22490966052379,
+    "mape_pct": 0.8873426163020152,
+    "test_rows": 8640,
+    "train_rows": 300000,
+    "train_seconds": 41.37
+  },
+  "per_region_metrics": {
+    "AEP": {
+      "mae_mw": 79.67684716559967,
+      "rmse_mw": 117.98059565943983
+    },
+    "COMED": {
+      "mae_mw": 63.453951395237304,
+      "rmse_mw": 94.30097080981754
+    },
+    "DAYTON": {
+      "mae_mw": 45.688437141199174,
+      "rmse_mw": 63.32969654709611
+    },
+    "DEOK": {
+      "mae_mw": 53.560842878983166,
+      "rmse_mw": 74.21410516309568
+    },
+    "DOM": {
+      "mae_mw": 62.04998824474316,
+      "rmse_mw": 86.12236882829
+    },
+    "DUQ": {
+      "mae_mw": 49.96674147275579,
+      "rmse_mw": 76.18585577730008
+    },
+    "EKPC": {
+      "mae_mw": 43.04391690887981,
+      "rmse_mw": 61.898933187532606
+    },
+    "FE": {
+      "mae_mw": 63.13178714695972,
+      "rmse_mw": 88.91906198895195
+    },
+    "NI": {
+      "mae_mw": 41.0865094788851,
+      "rmse_mw": 59.024294298558225
+    },
+    "OKGE": {
+      "mae_mw": 54.77387739530111,
+      "rmse_mw": 74.58718584419987
+    },
+    "PJME": {
+      "mae_mw": 78.69388919670597,
+      "rmse_mw": 113.32737502779682
+    },
+    "PJMW": {
+      "mae_mw": 54.17755332336595,
+      "rmse_mw": 77.10974570044901
+    }
+  },
+  "trained_at": "2026-09-11T23:53:50.665373",
+  "best_iteration": 899
+}

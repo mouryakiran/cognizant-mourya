@@ -21,6 +21,8 @@ ml/trained_models/*
 # Data (large generated datasets)
 data/raw/
 data/processed/
+energyiq/data/raw/
+energyiq/data/processed/
 
 # Environment & secrets
 .env
@@ -28,6 +30,9 @@ data/processed/
 # Archives / downloads
 *.zip
 *.crdownload
+
+# Root-level dataset copies (duplicates of data/processed copies)
+processed_energy_data.csv
 
 # VS Code
 .vscode/

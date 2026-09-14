@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EnergyIQ &middot; Smart Energy Optimisation Platform</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">&#9889;</span>
+      <div>
+        <h1>EnergyIQ</h1>
+        <p>ML forecasting &middot; energy optimisation &middot; recommendations</p>
+      </div>
+    </div>
+    <div class="controls">
+      <label>Region
+        <select id="region"></select>
+      </label>
+      <label>Horizon
+        <select id="horizon">
+          <option value="24">24 h</option>
+          <option value="48" selected>48 h</option>
+          <option value="72">72 h</option>
+          <option value="168">7 days</option>
+        </select>
+      </label>
+      <label>Facility
+        <select id="site">
+          <option value="">Regional grid</option>
+          <option value="15">Campus (15 MW)</option>
+          <option value="8">Factory (8 MW)</option>
+          <option value="2">Retail site (2 MW)</option>
+        </select>
+      </label>
+      <button id="refresh" class="btn">Analyse</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="kpi-grid" id="kpis"></section>
+
+    <section class="grid">
+      <div class="card chart-card span-2">
+        <h2>Demand forecast (MW) <span id="fc-sub" class="sub"></span></h2>
+        <div class="chart-wrap"><canvas id="forecastChart"></canvas></div>
+      </div>
+
+      <div class="card">
+        <h2>Model accuracy</h2>
+        <div id="model-card" class="stack"></div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card chart-card span-2">
+        <h2>Optimised schedule vs baseline</h2>
+        <div class="legend-inline">
+          <span class="sw b">Baseline</span>
+          <span class="sw o">Optimised net load</span>
+          <span class="sw c">Battery charge</span>
+          <span class="sw d">Battery discharge</span>
+        </div>
+        <div class="chart-wrap"><canvas id="optimChart"></canvas></div>
+        <div id="optim-summary" class="stack"></div>
+      </div>
+
+      <div class="card">
+        <h2>Recommendations</h2>
+        <div id="recs" class="stack"></div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card span-2">
+        <h2>Anomaly events (last 7 days)</h2>
+        <div id="anomalies" class="stack"></div>
+      </div>
+      <div class="card">
+        <h2>Tariff periods</h2>
+        <div id="tariff" class="stack"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>EnergyIQ &middot; XGBoost forecasting + LP optimisation &middot; <a href="/docs">API docs</a></footer>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
