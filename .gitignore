@@ -1,0 +1,34 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Node / frontend
+node_modules/
+dist/
+
+# ML artifacts
+ml/trained_models/*
+
+# Databases
+*.db
+*.sqlite3
+
+# Data (large generated datasets)
+data/raw/
+data/processed/
+
+# Environment & secrets
+.env
+
+# Archives / downloads
+*.zip
+*.crdownload
+
+# VS Code
+.vscode/
+.idea/
